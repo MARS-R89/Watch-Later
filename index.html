@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Later</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Watch Later</h1>
+
+    <form id="item-form" autocomplete="off">
+      <label for="topic">Topic</label>
+      <input type="text" id="topic" placeholder="e.g. React Server Components" required>
+
+      <label>Links</label>
+      <div id="links-container">
+        <div class="link-row">
+          <input type="url" class="link-input" placeholder="https://...">
+        </div>
+      </div>
+      <button type="button" id="add-link" class="secondary">+ Add link</button>
+
+      <label for="description">Description</label>
+      <textarea id="description" rows="3" placeholder="Why do you want to check this later?"></textarea>
+
+      <button type="submit">Save</button>
+    </form>
+
+    <section>
+      <div class="list-header">
+        <h2>Saved <span id="count"></span></h2>
+        <input type="search" id="search" placeholder="Search...">
+      </div>
+      <div id="items"></div>
+      <p id="empty" class="muted">Nothing saved yet.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
